@@ -39,7 +39,7 @@ mos_expert <- read_csv("data/raw_data/mos_expertTaxonomistIDProcessed.csv")
 ```
 
 ```{r join-datasets}
-# split the 'subsampleID' column into two new columns, including one called 
+# split the 'subsampleID' column into two new columns, including one called
 # 'sampleID' that we can use to match to the other dataset
 mos_expert <- mos_expert %>%
   separate(subsampleID,
