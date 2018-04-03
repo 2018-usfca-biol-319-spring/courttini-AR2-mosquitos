@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Introduction
 
-Delete this placeholder text, and replace it with your introduction text. You should include background on the NEON project including proper citations (e.g. [@thorpe2016introduction]), the sets of sites you are comparing, and other relevent background information related to your specific hypotheses, including perhaps information on the mosquito sampling design [@hoekman2016design]. 
+Delete this placeholder text, and replace it with your introduction text. You should include background on the NEON project including proper citations (e.g. [@thorpe2016introduction]), the sets of sites you are comparing, and other relevent background information related to your specific hypotheses, including perhaps information on the mosquito sampling design [@hoekman2016design].
 
 # Methods
 
