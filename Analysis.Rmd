@@ -1,0 +1,59 @@
+---
+title: "Analysis Report 2: NEON Mosquito Trap Data"
+author: "Don Francisco"
+date: "4/3/2018"
+bibliography: references.bib
+csl: ecology.csl
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+Delete this placeholder text, and replace it with your introduction text. You should include background on the NEON project including proper citations (e.g. [@thorpe2016introduction]), the sets of sites you are comparing, and other relevent background information related to your specific hypotheses, including perhaps information on the mosquito sampling design [@hoekman2016design]. 
+
+# Methods
+
+Describe where the data came from, including how they were collected in the field (information is in the pdf file in the data folder), some information about those sites and why you chose them, and how you are analyzing them (e.g. using R to visualize the results and the statistical tests you will use).
+
+# Results
+
+Add a number of code chunks in the Results section. These should read in, subset and plot the data as needed (no need to save any figures to pdf, since they will be put into the rendered document when you click 'knit'), and, for any hypotheses that you want to test, an appropriate statistical test. You should have at least 5 figures and/or tables in this section, which you use to test your hypotheses against the dataset. I've included some starter code to read in and merge the two datasets. You should build on this code for your own analyses.
+
+```{r load-packages}
+library("dplyr")
+library("tidyr")
+library("ggplot2")
+library("readr")
+```
+
+```{r read-in-datasets}
+# this is the information on each of the trapping locations and trapping events
+mos_trapping <- read_csv("data/raw_data/mos_trapping.csv")
+
+# this is the info about the taxonomic identity of mosquitos found in the traps
+mos_expert <- read_csv("data/raw_data/mos_expertTaxonomistIDProcessed.csv")
+```
+
+```{r join-datasets}
+# split the 'subsampleID' column into two new columns, including one called 
+# 'sampleID' that we can use to match to the other dataset
+mos_expert <- mos_expert %>%
+  separate(subsampleID,
+           into = c("sampleID", "subsample_number"),
+           sep = "\\.S\\.")
+
+# join the two datasets together based on the shared 'sampleIS' column
+mos_all <- mos_expert %>%
+  full_join(mos_trapping, by = "sampleID", suffix = c(".taxa", ".sample"))
+```
+
+# Discussion
+
+Discuss the results you found in the context of what you know about the site/sites and the predominant types of vegatation in those locations. Think also about the community dynamics of the mammal community at each of the sites, in the context of what you know about different types of species interactions, food webs, trophic transfer, etc.
+
+# Sources Cited
+
