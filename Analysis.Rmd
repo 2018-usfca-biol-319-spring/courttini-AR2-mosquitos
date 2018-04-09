@@ -55,7 +55,7 @@ mos_all <- mos_expert %>%
   full_join(mos_trapping, by = "sampleID", suffix = c(".taxa", ".sample"))
 ```
 
-```{r filter-by-species}
+```{r filter-by-speciesA}
 mos_communis <- mos_all %>%
   filter(scientificName == "Aedes communis") %>%
   group_by(siteID.sample) %>%
@@ -88,8 +88,27 @@ mos_elevation <- mos_all %>%
   ggtitle("Elevations of where Aedes communis is found")
 ```
 
+```{r anova-1}
+fit <- aov(siteID.sample ~ elevation, data = mos_elevation)
+```
 
+```{r filter-by-speciesB}
+mos_canadensis <- mos_all %>%
+  filter(scientificName == "Aedes canadensis") %>%
+  group_by(siteID.sample) %>%
+  tally() %>%
+  arrange(desc(n))
+```
 
+```{r boxplot-canadensis}
+ggplot(data = mos_canadensis,
+       aes(x = siteID.sample, y = n)) +
+  geom_boxplot() +
+  ggtitle("Number of mosquitos of Aedes canadensis present at NEON sites") +
+  geom_col(fill = "green")
+```
+
+**Show where these are located on the map**
 
 # Discussion
 
