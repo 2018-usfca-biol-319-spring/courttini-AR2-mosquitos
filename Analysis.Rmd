@@ -56,16 +56,40 @@ mos_all <- mos_expert %>%
 ```
 
 ```{r filter-by-species}
-mos_all %>%
+mos_communis <- mos_all %>%
   filter(scientificName == "Aedes communis") %>%
   group_by(siteID.sample) %>%
   tally() %>%
   arrange(desc(n))
 ```
 
-```{r}
-
+```{r boxplot-communis}
+ggplot(data = mos_communis,
+       aes(x = siteID.sample, y = n)) +
+  geom_boxplot() +
+  ggtitle("Number of mosquitos of Aedes communis present at NEON sites") +
+  geom_col(fill = "red")
 ```
+
+**Show where these are located on a map!**
+
+```{r}
+mos_elevation <- mos_all %>%
+  filter(scientificName == "Aedes communis") %>%
+  group_by(siteID.sample, elevation) %>%
+  tally() %>%
+  arrange(desc(n))
+```
+
+```{r}
+  ggplot(data = mos_elevation,
+  aes(x = siteID.sample, y = elevation)) +
+  geom_point() + (aes(color = elevation)) +
+  ggtitle("Elevations of where Aedes communis is found")
+```
+
+
+
 
 # Discussion
 
