@@ -73,7 +73,7 @@ ggplot(data = mos_communis,
 
 **Show where these are located on a map!**
 
-```{r}
+```{r filter-data-elevation}
 mos_elevation <- mos_all %>%
   filter(scientificName == "Aedes communis") %>%
   group_by(siteID.sample, elevation) %>%
@@ -81,7 +81,7 @@ mos_elevation <- mos_all %>%
   arrange(desc(n))
 ```
 
-```{r}
+```{r geompoint-elevation}
   ggplot(data = mos_elevation,
   aes(x = siteID.sample, y = elevation)) +
   geom_point() + (aes(color = elevation)) +
