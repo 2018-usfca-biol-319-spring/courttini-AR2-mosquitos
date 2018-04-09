@@ -19,7 +19,7 @@ The different types of field sites include core terrestrial sites, core aquatic 
 
 ![](data/2017_NEONDomainOverview.jpg)
 
-
+At the varying sites multiple different functional groups of dry mass are recorded depending the location of the site. This includes dry mass of flowers, leaves, mixed, needles, other, seeds, twigs/branches, and woody material. NEON also chose to observe small mammals as they are common to almost every place and they are receptive to changes in the environment. These small mammals are based on a couple different characteristics including taxonomic, behavior, dietary, and size. This data is important for in the use of public health issues like disease prevalence, accounting for the amount of species that are in certain environments, and specifically for climate changes and land use. Specifically, 
 
 
 Delete this placeholder text, and replace it with your introduction text. You should include background on the NEON project including proper citations (e.g. [@thorpe2016introduction]), the sets of sites you are comparing, and other relevent background information related to your specific hypotheses, including perhaps information on the mosquito sampling design [@hoekman2016design].
