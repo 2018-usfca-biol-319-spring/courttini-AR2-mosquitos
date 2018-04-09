@@ -1,7 +1,7 @@
 ---
 title: "Analysis Report 2: NEON Mosquito Trap Data"
-author: "Don Francisco"
-date: "4/3/2018"
+author: "Courtney Lopez"
+date: "4/16/2018"
 bibliography: references.bib
 csl: ecology.csl
 output: github_document
@@ -14,6 +14,10 @@ knitr::opts_chunk$set(echo = TRUE)
 # Introduction
 
 Delete this placeholder text, and replace it with your introduction text. You should include background on the NEON project including proper citations (e.g. [@thorpe2016introduction]), the sets of sites you are comparing, and other relevent background information related to your specific hypotheses, including perhaps information on the mosquito sampling design [@hoekman2016design].
+
+
+Because species *Aedes communis* has the trait of living in woodland pools, we should see it only in the spring season at terrestrial sites back east and not in the others.
+
 
 # Methods
 
