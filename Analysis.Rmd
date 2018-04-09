@@ -55,6 +55,18 @@ mos_all <- mos_expert %>%
   full_join(mos_trapping, by = "sampleID", suffix = c(".taxa", ".sample"))
 ```
 
+```{r filter-by-species}
+mos_all %>%
+  filter(scientificName == "Aedes communis") %>%
+  group_by(siteID.sample) %>%
+  tally() %>%
+  arrange(desc(n))
+```
+
+```{r}
+
+```
+
 # Discussion
 
 Discuss the results you found in the context of what you know about the site/sites and the predominant types of vegatation in those locations. Think also about the community dynamics of the mammal community at each of the sites, in the context of what you know about different types of species interactions, food webs, trophic transfer, etc.
