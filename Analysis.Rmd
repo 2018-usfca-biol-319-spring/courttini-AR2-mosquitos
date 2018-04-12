@@ -75,6 +75,9 @@ mos_communis <- mos_all %>%
   arrange(desc(n))
 ```
 
+
+**Figure 1** 
+
 ```{r boxplot-communis}
 ggplot(data = mos_communis,
        aes(x = siteID.sample, y = n)) +
@@ -83,7 +86,10 @@ ggplot(data = mos_communis,
   geom_col(fill = "red")
 ```
 
+**Figure 2**
+
 **Show where these are located on a map!**
+
 
 ```{r filter-data-elevation}
 mos_elevation <- mos_all %>%
@@ -93,6 +99,8 @@ mos_elevation <- mos_all %>%
   arrange(desc(n))
 ```
 
+**Figure 3**
+
 ```{r geompoint-elevation}
   ggplot(data = mos_elevation,
   aes(x = siteID.sample, y = elevation)) +
@@ -100,12 +108,15 @@ mos_elevation <- mos_all %>%
   ggtitle("Elevations of where Aedes communis is found")
 ```
 
+**Figure 4**
+
 ```{r point-plot-of-count}
 mos_all %>%
   filter(scientificName == "Aedes communis") %>%
   group_by(siteID.sample, elevation) %>%
   summarize(mean_count = mean(individualCount, na.rm = TRUE)) %>%
   ggplot(aes(x = elevation, y = mean_count)) +
+  ggtitle("Individual counts of Aedes communis at Varying Elevations") +
   geom_point()
 ```
 
@@ -126,6 +137,8 @@ mos_canadensis <- mos_all %>%
   arrange(desc(n))
 ```
 
+**Figure 5**
+
 ```{r boxplot-canadensis}
 ggplot(data = mos_canadensis,
        aes(x = siteID.sample, y = n)) +
@@ -134,11 +147,13 @@ ggplot(data = mos_canadensis,
   geom_col(fill = "green")
 ```
 
+**Figure 6**
+
 **Show where these are located on the map**
 
 # Discussion
 
-There is a correlation between individual mean count of the species *Aedes communis* and elevation. The P value was less than 0.05 (0.000593), so we reject the null hypothesis and conclude that there is a significant difference between mosquitos captured and their elevation. 
+There is a correlation between individual mean count of the species *Aedes communis* and elevation. The P value was less than 0.05 (0.000593), so we reject the null hypothesis and conclude that there is a significant difference between mosquitos captured and their elevation. There is a significant relationship between elevation and mosquito abundance. 
 
 Discuss the results you found in the context of what you know about the site/sites and the predominant types of vegatation in those locations. Think also about the community dynamics of the mammal community at each of the sites, in the context of what you know about different types of species interactions, food webs, trophic transfer, etc.
 
