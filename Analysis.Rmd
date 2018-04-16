@@ -15,16 +15,22 @@ knitr::opts_chunk$set(echo = TRUE)
 
 The National Ecological Observatory Network (NEON) is an ecological observation facility that collects data on rapidly changing ecological processes in the United States. NEON has standardized data from 81 field sites that span across the United States within 20 Eco-climatic domains that represent regions of distinct land forms, vegetation, climate, and ecosystem dynamics. NEON measures the causes and effects of environmental change in different types of environments and data sets. 
 
-The different types of field sites include core terrestrial sites, core aquatic sites, relocatable terrestrial sites, and relocatable aquatic sites. The different sites ensure that the data will statistically represent ecological, physical, and biological differences spanning the continent. As seen from the image below, the field sites are also in Alaska, Hawaii, and Puerto Rico. This image shows where the NEON sites are located including where the four different types of sites are located.
+The different types of field sites include core terrestrial sites, core aquatic sites, relocatable terrestrial sites, and relocatable aquatic sites. The different sites ensure that the data will statistically represent ecological, physical, and biological differences spanning the continent. As seen from the image below, the field sites are also in Alaska, Hawaii, and Puerto Rico. This image shows where the NEON sites are located including where the four different types of sites are located [@thorpe2016introduction].
 
 ![](data/2017_NEONDomainOverview.jpg)
 
 At the varying sites multiple different functional groups of dry mass are recorded depending the location of the site. This includes dry mass of flowers, leaves, mixed, needles, other, seeds, twigs/branches, and woody material. NEON also chose to observe small mammals as they are common to almost every place and they are receptive to changes in the environment. These small mammals are based on a couple different characteristics including taxonomic, behavior, dietary, and size. This data is important for in the use of public health issues like disease prevalence, accounting for the amount of species that are in certain environments, and specifically for climate changes and land use. Specifically, this project looks at a data set on mosquitos at each site.  
 
+NEON decided to look at mosquitos as they are a diverse a widespread family of insects. They also contain different life forms and stages like aquatic larval, pupal forms, and flying adult form. Mosquitos are extensively studied, because of their ecological and community health significance. They act as supplement for a number of parasites and pathogens of humans, and wildlife in order to understand the impacts and locations of associated diseases. They have a huge impact on not only human health, but livestock as well and that is one of the reasons why mosquitos are significantly studied. "Because of their sensitivity to environmental gradients and perturbations, mosquitoes represent an ideal sentinel taxon for evaluating the ecological effects of global change phenomena" [@hoekman2016design]. Mosquitos have a short generation time and high fecundity which. However, since these changes are big and quick, different species of mosquitos can respond in varying ways.  
+
+With this information, I will be specifically focussing on the species *Aedes communis* and comparing it's location to the species *Aedes canadensis*. The sites that I will be focusing on/report the captured species of *Aedes communis* are Healy (HEAL), Harvard Forest (HARV), Bartlett Experimental Forest (BART), UNDERC (UNDE), Treehaven (TREE), and Delta Junction (DEJU). The sites that I will be focusing on/report the captured species of *Aedes canadensis* UNDERC (UNDE), Harvard Forest (HARV), Treehaven (TREE), Talladega National Forest (TALL), Steigerwaldt Land Services (STEI), Bartlett Experimental Forest (BART), Smithsonian Environmental Research Center (SERC), Ordway-Swisher Biological Station (OSBS), Oak Ridge (ORNL), Blandy Experimental Farm (BLAN), Disney Wilderness Preserve (DSNY), The University of Kansas Field Station (UKFS), and Jones Ecological Research Center (JERC). 
+
+Because species *Aedes communis* and *Aedes canadensis* has the trait of living in woodland pools, we should see it only in locations back east and only at certain elevations that support this habitat. These species were chosen as they like to reside in woodland pools and I want to see where these two species are located accross the sites and if their abundance has anything to do with elevation.
+
+Woodland pools are seasonal wetlands that come about from winter ice and snow. The ice and snow melt in the spring and then create these small pools that are home to many insects and animals.  [@eisen2008mosquito]
 
 Delete this placeholder text, and replace it with your introduction text. You should include background on the NEON project including proper citations (e.g. [@thorpe2016introduction]), the sets of sites you are comparing, and other relevent background information related to your specific hypotheses, including perhaps information on the mosquito sampling design [@hoekman2016design].
 
-Because species *Aedes communis* has the trait of living in woodland pools, we should see it only in the spring season at terrestrial sites back east and not in the others.
 
 
 # Methods
@@ -33,7 +39,7 @@ The mosquito data of this report came from the Terrestrial Observation System (T
 
 The design for capturing the mosquitos followed a protocal that is a spatially-balanced stratified random design. The field collection of the live mosqitos was conducted using Cneters for Disease Control and Prevention (CDC) CO2 light traps. These light traps included a cylindrical cooler to hold dry ice, a plastic cover attached to a light with a fan and a mesh cup for collection of the mosquitos. The dry ice releases CO2 and this gas attracts the mosquitos so they can be collected. This protocal design includes ten mosquito points per site and are randomly distributed within each National Land Cover Database (NLCD). These mosquito traps were placed so they were easily road accessible (5-45 m). Sampling would occur every two weeks at core sites, and every four weeks at relocatable sites when their was adult mosquitos present. Traps were set at night for about 16 hours and then collected, then traps were reset from the times of 8-10 in the morning and kept out for 8 hours for collection. Samples are then collected from the day and reset again for the night sample. This happens for 40 continuous sampling hours. The date the trap was set, and collection time was recorded for each collection sample. Once the mosquito season had ended, then sampling was conducted once a week.    
 
-The sites I chose to look at were affiliated with two different species: *Aedes communis* and *Aedes canadensis*. These species were chosen as they like to reside in woodland pools and I want to see where these two species are located accross the sites and their abundance has anything to do with elevation. Most of the analysis will be done with *Aedes communis* and the second species *Aedes canadensis* was used for comparison as they are in the same Genus. The sites I am looking at are Bartlett Experimental Forest (BART), Blandy Experimental Farm (BLAN), Delta Junction (DEJU), Disney Wilderness Preserve (DSNY), Harvard Forest (HARV), Healy (HEAL), Jones Ecological Research Center (JERC), Oak Ridge (ORNL), Ordway-Swisher Biological Station (OSBS), Smithsonian Environmental Research Center (SERC), Steigerwaldt Land Services (STEI), Talladega National Forest (TALL), Treehaven (TREE), The University of Kansas Field Station (UKFS), and UNDERC (UNDE). This mosquito data will be analyzed using R to create boxplots, point graphs, and a statistical summary with a P value to determine if there are significant differences of certain type of species at varying elevations and where these species are located across the US. Because these mosquitos have frequent affiliations with humans and ability to survive in modified environments by humans, the study of mosquitos and their ecology needs to be more widely studies. NEON is testing mosquitos to determine as well if they are significantly affected by land use changes. 
+The sites I chose to look at were affiliated with two different species: *Aedes communis* and *Aedes canadensis*. These species were chosen as they like to reside in woodland pools and I want to see where these two species are located accross the sites and if their abundance has anything to do with elevation. Most of the analysis will be done with *Aedes communis* and the second species *Aedes canadensis* was used for comparison for location as they are in the same Genus. The sites I am looking at are Bartlett Experimental Forest (BART), Blandy Experimental Farm (BLAN), Delta Junction (DEJU), Disney Wilderness Preserve (DSNY), Harvard Forest (HARV), Healy (HEAL), Jones Ecological Research Center (JERC), Oak Ridge (ORNL), Ordway-Swisher Biological Station (OSBS), Smithsonian Environmental Research Center (SERC), Steigerwaldt Land Services (STEI), Talladega National Forest (TALL), Treehaven (TREE), The University of Kansas Field Station (UKFS), and UNDERC (UNDE). This mosquito data will be analyzed using R to create boxplots, point graphs, and a statistical summary with a P value to determine if there are significant differences of certain type of species at varying elevations and where these species are located across the US. Because these mosquitos have frequent affiliations with humans and ability to survive in modified environments by humans, the study of mosquitos and their ecology needs to be more widely studies. NEON is testing mosquitos to determine as well if they are significantly affected by land use changes. 
 
 # Results
 
@@ -198,6 +204,42 @@ ggplot() +
   ggtitle("Aedes Canadensis Location and Abundance")
 ```
 
+```{r filter-data-elevation2}
+mos_elevation2 <- mos_all %>%
+  filter(scientificName == "Aedes canadensis") %>%
+  group_by(siteID.sample, elevation) %>%
+  tally() %>%
+  arrange(desc(n))
+```
+
+**Figure 7**
+
+```{r boxplot-elevation}
+boxplot(elevation ~ siteID.sample, data = mos_elevation2,
+        main = "Elevations of where Aedes canadensis is found",
+        xlab = "Site ID", ylab = "Elevation")
+```
+
+**Figure 8**
+
+```{r point-plot-of-count2}
+mos_all %>%
+  filter(scientificName == "Aedes canadensis") %>%
+  group_by(siteID.sample, elevation) %>%
+  summarize(mean_count = mean(individualCount, na.rm = TRUE)) %>%
+  ggplot(aes(x = elevation, y = mean_count)) +
+  ggtitle("Individual counts of Aedes canadensis at Varying Elevations") +
+  geom_point()
+```
+
+```{r statistic2}
+mos_all %>%
+  filter(scientificName == "Aedes canadensis") %>%
+  group_by(siteID.sample, elevation) %>%
+  summarize(mean_count = mean(individualCount, na.rm = TRUE)) %>%
+  lm(mean_count ~ elevation, data = .) %>%
+  summary()
+```
 
 # Discussion
 
