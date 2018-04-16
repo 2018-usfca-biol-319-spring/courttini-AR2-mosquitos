@@ -262,7 +262,7 @@ There is a correlation between individual mean count of the species *Aedes canad
 
 # Discussion
 
-My hypothesis was because species *Aedes communis* and *Aedes canadensis* have the trait of living in woodland pools, we should see it only in locations back East and only at certain elevations that support this habitat. This is very much true as the habitat they reside in is at certain locations that produce these woodland/snowpools during the spring season. As shown in Figure 2, Alaska is the most abundant with the species *Aedes communis*. The HEAL site in Alaska is compacted with with snow and ice in the winter, which then melts in the spring to create the perfect conditions for the species to reside in. 
+My hypothesis was because species *Aedes communis* and *Aedes canadensis* have the trait of living in woodland pools, we should see it only in locations back East and only at certain elevations that support this habitat. This is very much true as the habitat they reside in is at certain locations that produce these woodland/snowpools during the spring season. As shown in Figure 2, Alaska is the most abundant with the species *Aedes communis*. The HEAL site in Alaska is compacted with with snow and ice in the winter, which then melts in the spring to create the perfect conditions for the species to reside in. The 
 
 There is a significant relationship between elevation and mosquito abundance for both of the species. 
 
