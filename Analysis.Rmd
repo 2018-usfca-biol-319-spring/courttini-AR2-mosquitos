@@ -133,7 +133,7 @@ mos_elevation <- mos_all %>%
 
 **Figure 3**
 
-```{r boxplot-elevation}
+```{r boxplot-elevation1}
 boxplot(elevation ~ siteID.sample, data = mos_elevation,
         main = "Elevations of where Aedes communis is found",
         xlab = "Site ID", ylab = "Elevation")
@@ -227,7 +227,7 @@ mos_elevation2 <- mos_all %>%
 
 **Figure 7**
 
-```{r boxplot-elevation}
+```{r boxplot-elevation2}
 boxplot(elevation ~ siteID.sample, data = mos_elevation2,
         main = "Elevations of where Aedes canadensis is found",
         xlab = "Site ID", ylab = "Elevation")
